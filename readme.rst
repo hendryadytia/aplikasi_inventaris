@@ -1,29 +1,24 @@
 ###################
-What is CodeIgniter
+Project Semester 4 WP 3 (?)
 ###################
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
-who build web sites using PHP. Its goal is to enable you to develop projects
-much faster than you could if you were writing code from scratch, by providing
-a rich set of libraries for commonly needed tasks, as well as a simple
-interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
+project kali ini tentang program inventaris sebuah CV general trading
 
 *******************
 Release Information
 *******************
 
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<https://codeigniter.com/download>`_ page.
+rilis v0.1 ini masih kasar banget, banyak yg belum sesuai
 
 **************************
-Changelog and New Features
+Changelog and future update
 **************************
-
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
+FU = 
+		1. halaman master data -> barang ditiadakan dan di merge dengan halaman laporan barang masuk
+		2. menyesuaikan form input barang keluar dan barang masuk
+		3. menyesuaikan kolom-kolom pada form input
+		4. menambahkan fitur fundamental yg belum ada
+		5. fitur print QR code (opsional)
 
 *******************
 Server Requirements
@@ -38,9 +33,8 @@ issues, as well as missing features.
 ************
 Installation
 ************
-
-Please see the `installation section <https://codeigniter.com/user_guide/installation/index.html>`_
-of the CodeIgniter User Guide.
+langsung copy aja ke htdocs sebagai folder admin, 
+buat database dengan nama 'project' lalu import file project.sql yg sudah disediakan
 
 *******
 License
