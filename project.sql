@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Waktu pembuatan: 08 Apr 2021 pada 17.40
+-- Waktu pembuatan: 17 Apr 2021 pada 20.08
 -- Versi server: 10.4.14-MariaDB
 -- Versi PHP: 7.2.34
 
@@ -190,7 +190,7 @@ CREATE TABLE `operator` (
 --
 
 INSERT INTO `operator` (`id_operator`, `nama_operator`, `username`, `password`, `id_akses`, `last_login`, `foto`) VALUES
-(9, 'Adit', 'admin', '21232f297a57a5a743894a0e4a801fc3', 1, '2021-04-08', 'avatar3.png'),
+(9, 'Adit', 'admin', '21232f297a57a5a743894a0e4a801fc3', 1, '2021-04-18', 'avatar3.png'),
 (15, 'kasir', 'kasir', 'c7911af3adbd12a035b289556d96470a', 2, '2020-12-26', 'ebb1798a06597d68f86106e4c76183bb.png'),
 (19, 'Editor', 'editor', '5aee9dbd2a188839105073571bee1b1f', 3, '2021-01-02', 'd9192320c0b35f7f3d5d107728c70042.png');
 
@@ -247,9 +247,7 @@ CREATE TABLE `stok` (
 --
 
 INSERT INTO `stok` (`id_stok`, `id_barang`, `stok_barang`, `tanggal_stok`) VALUES
-(57, 74, 40, '2021-03-01'),
-(58, 73, 2, '2020-12-14'),
-(59, 75, 197, '2020-12-02'),
+(59, 103, 197, '2020-12-02'),
 (60, 76, 99916, '2021-02-20'),
 (67, 83, 9996, '2021-01-21'),
 (68, 84, 998, '2021-01-09'),
@@ -269,7 +267,6 @@ INSERT INTO `stok` (`id_stok`, `id_barang`, `stok_barang`, `tanggal_stok`) VALUE
 (79, 95, 299, '2021-01-26'),
 (80, 96, 99, '2021-01-26'),
 (81, 97, 967, '2021-02-26'),
-(82, 98, 110, '2021-01-28'),
 (83, 99, 88, '2021-02-26'),
 (84, 100, 999, '2021-02-17'),
 (85, 101, 999, '2021-02-17'),
