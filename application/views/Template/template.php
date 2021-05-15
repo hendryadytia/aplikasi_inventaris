@@ -132,8 +132,7 @@
                         <ul class="treeview-menu">
                             <li class="active"><a href="<?php echo base_url() ?>index.php/kategori"><i
                                         class="fa fa-circle-o"></i>KATEGORI</a></li>
-                            <li><a href="<?php echo base_url() ?>index.php/barang"><i
-                                        class="fa fa-circle-o"></i>BARANG</a></li>
+
                         </ul>
                     </li>
                     <li>
@@ -143,20 +142,39 @@
                             </span>
                         </a>
                     </li>
-                    <li>
-                        <a href="<?php echo base_url() ?>index.php/stok">
-                            <i class="fa fa-cubes"></i> <span>LAPORAN BARANG MASUK</span>
+                    <li class="active treeview">
+                        <a href="#">
+                            <i class="fa fa-folder-o"></i> <span> Barang Masuk</span>
                             <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right-container"></i>
                             </span>
                         </a>
+                        <ul class="treeview-menu">
+                            <li class="active"><a href="<?php echo base_url() ?>index.php/lbm/post"><i
+                                        class="fa fa-circle-o"></i>Input Data</a></li>
+                            <li class="active"><a href="<?php echo base_url() ?>index.php/lbm"><i
+                                        class="fa fa-circle-o"></i>Lihat Data</a></li>
+                        </ul>
+
                     </li>
-                    <li>
-                        <a href="<?php echo base_url() ?>index.php/laporan">
-                            <i class="fa fa-cubes"></i> <span>LAPORAN BARANG KELUAR</span>
+
+                    <li class="active treeview">
+                        <a href="#">
+                            <i class="fa fa-folder-o"></i> <span> Barang Keluar</span>
                             <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right-container"></i>
                             </span>
                         </a>
+                        <ul class="treeview-menu">
+                            <li class="active"><a href="<?php echo base_url() ?>index.php/lbk/post"><i
+                                        class="fa fa-circle-o"></i>Input Data</a></li>
+                            <li class="active"><a href="<?php echo base_url() ?>index.php/lbk"><i
+                                        class="fa fa-circle-o"></i>Lihat Data</a></li>
+
+                        </ul>
+
                     </li>
+
 
 
                 </ul>

@@ -1,6 +1,6 @@
 <?php
 
-class Model_stok extends CI_Model{
+class Model_lbm extends CI_Model{
 
 	function tampil_data()
 	{

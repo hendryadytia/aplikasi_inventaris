@@ -1,6 +1,6 @@
 <?php
 
-class Model_Laporan extends CI_Model
+class Model_lbk extends CI_Model
 {
 
     function get_data()

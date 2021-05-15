@@ -115,10 +115,8 @@ td {
                                 <th>No</th>
                                 <th>Nama barang</th>
                                 <th>Kategori barang</th>
-                                <th>Harga Barang</th>
-                                <th>Stok Barang</th>
-
-                                <th>Tanggal</th>
+                                <th>Biaya Perbaikan</th>
+                                <th>Tanggal Masuk</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
@@ -131,9 +129,7 @@ td {
                                 <td><?php echo $s->nama_barang; ?></td>
                                 <td><?php echo $s->nama_kategori; ?></td>
                                 <td>Rp.<?php echo number_format($s->harga); ?></td>
-                                <td>
-                                    <?php echo $s->stok_barang; ?>
-                                </td>
+
 
                                 <td><?php echo $s->tanggal_stok; ?></td>
                                 <td><?php
