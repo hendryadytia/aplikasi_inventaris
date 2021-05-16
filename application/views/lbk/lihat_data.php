@@ -43,11 +43,6 @@ td {
             <div class="box box-info">
                 <div class='box-header  with-border'>
                     <h3 class='box-title'>Stok Barang</h3>
-                    <div class="pull-right">
-                        <?php
-						echo anchor('stok/post', 'Tambah Data', array('class' => 'btn btn-success'));
-						?>
-                    </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12">

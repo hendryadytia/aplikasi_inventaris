@@ -6,7 +6,6 @@ class Kategori extends CI_Controller
 	function __construct()
 	{
 		parent::__construct();
-		chek_role();
 		$this->load->model('Model_kategori');
 	}
 
