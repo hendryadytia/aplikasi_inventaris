@@ -33,6 +33,7 @@
                 <div class="icon">
                     <i class="fa fa-<?= $info_box->icon ?>"></i>
                 </div>
+                <p>contoh ngepush/commit</p>
                 <a href="<?= base_url() . strtolower($info_box->link); ?>" class="small-box-footer">
                     More info
                     <i class="fa fa-arrow-circle-right"></i>
