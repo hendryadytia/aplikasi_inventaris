@@ -4,7 +4,7 @@ class Model_kategori extends CI_Model {
 	function tampilkan_data() {
 
 		return 
-		$this->db->get('kategori')->result(); 
+		$this->db->order_by('id_kategori', 'ASC')->get('kategori')->result(); 
 	}
 		function post()
 		{

@@ -83,24 +83,7 @@ td {
                             </div>
 
                         </div>
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <label for="metode" class="control-label">Metode</label>
-                                <div class="input-group">
-                                    <select class="form-control" name="metode">
-                                        <option value="">Pilih Semua</option>
-                                        <?php
-                                        foreach ($metode as $m) {
-                                            echo "<option value=' $m->id_byr'>$m->metode</option>";
-                                        }
-                                        ?>
-                                    </select>
-                                    <span class="input-group-addon">
-                                        <span class="fa fa-list"></span>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
+
                         <div class="col-md-2" style="padding-top:25px;">
                             <button type="submit" name="search" id="search" value="Search" class="btn btn-info">
                                 Search</button>
@@ -114,8 +97,9 @@ td {
                             <tr>
                                 <th>No</th>
                                 <th>Nama barang</th>
-                                <th>Kategori barang</th>
-                                <th>Biaya Perbaikan</th>
+                                <th>Nomor Seri</th>
+                                <th>Pemilik</th>
+                                <th>Kategori Kerusakan</th>
                                 <th>Tanggal Masuk</th>
                                 <th>Aksi</th>
                             </tr>
@@ -123,19 +107,18 @@ td {
                         <tbody>
                             <?php
 							$no = 0;
-							foreach ($stok as $s) { ?>
+							foreach ($barangmasuk as $s) { ?>
                             <tr>
                                 <td><?php echo ++$no ?> </td>
                                 <td><?php echo $s->nama_barang; ?></td>
+                                <td><?php echo $s->no_seri; ?></td>
+                                <td><?php echo $s->pemilik; ?></td>
                                 <td><?php echo $s->nama_kategori; ?></td>
-                                <td>Rp.<?php echo number_format($s->harga); ?></td>
-
-
-                                <td><?php echo $s->tanggal_stok; ?></td>
+                                <td><?php echo $s->tgl_masuk; ?></td>
                                 <td><?php
-										echo anchor(site_url('stok/edit/' . $s->id_stok), '<i class="fa fa-pencil-square-o fa-lg"></i>&nbsp;&nbsp;Edit', array('title' => 'edit', 'class' => 'btn btn-sm btn-warning'));
+										echo anchor(site_url('lbm/edit/' . $s->id_barang), '<i class="fa fa-pencil-square-o fa-lg"></i>&nbsp;&nbsp;Edit', array('title' => 'edit', 'class' => 'btn btn-sm btn-warning'));
 										echo '&nbsp';
-										echo anchor(site_url('stok/hapus/' . $s->id_stok), '<i class="fa fa-trash fa-lg"></i>&nbsp;&nbsp;Hapus', 'title="delete" class="btn btn-sm btn-danger "');
+										echo anchor(site_url('lbm/hapus/' . $s->id_barang), '<i class="fa fa-trash fa-lg"></i>&nbsp;&nbsp;Hapus', 'title="delete" class="btn btn-sm btn-danger "');
 										?>
                                 </td>
                             </tr>

@@ -69,7 +69,7 @@ class lbk extends CI_Controller
                     'harga' => $harga,
                     'foto' => $foto,
                 );
-                $this->Model_barang->post($data, $id);
+                $this->Model_lbk->post($data, $id);
                 $this->session->set_flashdata('message', 'Data Barang berhasil ditambahkan!');
                 redirect('lbk');
             }
