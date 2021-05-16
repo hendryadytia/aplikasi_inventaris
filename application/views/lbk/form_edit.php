@@ -17,19 +17,15 @@
                     <h3 class='box-title'>Tambah Data Barang Keluar</h3>
                 </div>
                 <div class="box-body">
-                    <?php echo form_open('lbk/post', array('role' => "form", 'id' => "myForm", 'data-toggle' => "validator")); ?>
+                    <?php echo form_open('lbk/edit', array('role' => "form", 'id' => "myForm", 'data-toggle' => "validator")); ?>
                     <div class="form-group">
                         <label for="nama_barang" class="control-label">Nama Barang</label>
                         <div class="input-group">
-                            <select class="form-control" name="nama_barang">
-                                <?php
-								foreach ($nm_brg as $nm) {
-									echo "<option value=' $nm->id_barang'>$nm->nama_barang</option>";
-								}
-								?>
-                            </select>
+                            <input type="text" class="form-control" name="nama_barang" pattern="[a-zA-Z0-9\s]+"
+                                id="nama_barang" value="<?php echo $record['nama_barang'] ?>" placeholder="nama barang"
+                                value="" readonly />
                             <span class="input-group-addon">
-                                <span class="fa fa-list"></span>
+                                <span class="fa fa-cube"></span>
                             </span>
                         </div>
                         <div class="help-block with-errors"></div>
@@ -38,7 +34,8 @@
                         <label for="tgl_keluar" class="control-label">Tanggal Keluar</label>
                         <div class="input-group">
                             <input type="text" class="form-control" name="tgl_keluar" id="tgl_keluar"
-                                data-error="Tanggal keluar harus diisi" required />
+                                value="<?php echo $record['tgl_keluar'] ?>" data-error="Tanggal keluar harus diisi"
+                                required />
                             <span class="input-group-addon">
                                 <span class="fa fa-calendar"></span>
                             </span>
@@ -46,6 +43,7 @@
                         <div class="help-block with-errors"></div>
                     </div>
                     <div class="box-footer">
+                        <input type="hidden" name="id" value="<?php echo $record['id_barang'] ?>">
                         <button type="submit" name="submit" class="btn btn-primary ">Simpan</button>
                         <a href="<?php echo base_url() ?>barang" class="btn btn-default ">Cancel</a>
                     </div>

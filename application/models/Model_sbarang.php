@@ -1,13 +1,12 @@
 <?php
 
-class Model_lbk extends CI_Model
+class Model_sbarang extends CI_Model
 {
 
     function tampil_data()
 	{
 		return 
 		$this->db
-		->where('status !=' ,0)
 		->join('kategori','kategori.id_kategori = baranginv.id_kerusakan','left')
 		->get('baranginv')->result();
 	}
@@ -23,18 +22,6 @@ class Model_lbk extends CI_Model
 	}
 
 
-    function get_range($start, $end)
-    {
-            return $this->db
-                ->where('status !=' ,0)
-                ->where("tgl_keluar >=", $start)
-                ->where("tgl_keluar <=", $end)
-                ->join('kategori','kategori.id_kategori = baranginv.id_kerusakan','left')
-                ->order_by('id_barang', 'ASC')
-                ->get('baranginv')->result();
-      
-    }
-    
     function tampil_nmbrg(){
         return
         $this->db->where('status !=' ,1)->order_by('id_barang', 'ASC')->get('baranginv')->result(); 

@@ -14,9 +14,6 @@ class Dashboard extends CI_controller
     function index()
     {
         $data['box'] = $this->box();
-        $data['graph'] = $this->Model_dashboard->graph_stok();
-        $data['kategori'] = $this->Model_dashboard->graph_kategori();
-        $data['laris'] = $this->Model_dashboard->barang_laris();
         $this->template->load('template/template', 'dashboard/lihat_dashboard', $data);
         // var_dump($this->session->userdata());
         // die;
@@ -28,7 +25,7 @@ class Dashboard extends CI_controller
         $box = [
             [
                 'box'         => 'light-blue',
-                'total'     => $this->Model_dashboard->total('barang'),
+                'total'     => $this->Model_dashboard->total('baranginv'),
                 'title'        => 'Total Barang',
                 'link'    => 'Barang',
                 'icon'        => 'cubes'

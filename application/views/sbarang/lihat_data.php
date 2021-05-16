@@ -49,48 +49,7 @@ td {
 						?>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-xs-12">
-                        <?php echo form_open('lbk', array('role' => "form", 'id' => "myForm", 'data-toggle' => "validator")); ?>
-                        <div class="col-md-3">
-                            <div class="input-daterange">
-                                <div class="form-group">
-                                    <label for="start_date" class="control-label">Tanggal Awal</label>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" name="start_date" id="start_date"
-                                            data-error="Tanggal Awal harus diisi" required />
-                                        <span class="input-group-addon">
-                                            <span class="fa fa-calendar"></span>
-                                        </span>
-                                    </div>
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="input-daterange">
-                                <div class="form-group">
-                                    <label for="end_date" class="control-label">Tanggal Akhir</label>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" name="end_date" id="end_date"
-                                            data-error="Tanggal Akhir harus diisi" required />
-                                        <span class="input-group-addon">
-                                            <span class="fa fa-calendar"></span>
-                                        </span>
-                                    </div>
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                            </div>
 
-                        </div>
-
-                        <div class="col-md-2" style="padding-top:25px;">
-                            <button type="submit" name="search" id="search" value="Search" class="btn btn-info">
-                                Search</button>
-                        </div>
-                        </form>
-                    </div>
-                </div>
                 <?php if ($this->session->userdata('akses') == 1 ):?>
                 <div class="box-body">
                     <table id="myTable" class="table table-bordered table-striped table-hover">
@@ -101,6 +60,7 @@ td {
                                 <th>Nomor Seri</th>
                                 <th>Pemilik</th>
                                 <th>Kategori Kerusakan</th>
+                                <th>Tanggal Masuk</th>
                                 <th>Tanggal Keluar</th>
                                 <th>Aksi</th>
                             </tr>
@@ -115,11 +75,12 @@ td {
                                 <td><?php echo $s->no_seri; ?></td>
                                 <td><?php echo $s->pemilik; ?></td>
                                 <td><?php echo $s->nama_kategori; ?></td>
+                                <td><?php echo $s->tgl_masuk; ?></td>
                                 <td><?php echo $s->tgl_keluar; ?></td>
                                 <td><?php
-										echo anchor(site_url('lbk/edit/' . $s->id_barang), '<i class="fa fa-pencil-square-o fa-lg"></i>&nbsp;&nbsp;Edit', array('title' => 'edit', 'class' => 'btn btn-sm btn-warning'));
+										echo anchor(site_url('sbarang/edit/' . $s->id_barang), '<i class="fa fa-pencil-square-o fa-lg"></i>&nbsp;&nbsp;Edit', array('title' => 'edit', 'class' => 'btn btn-sm btn-warning'));
 										echo '&nbsp';
-										echo anchor(site_url('lbk/hapus/' . $s->id_barang), '<i class="fa fa-trash fa-lg"></i>&nbsp;&nbsp;Hapus', 'title="delete" class="btn btn-sm btn-danger "');
+										echo anchor(site_url('sbarang/hapus/' . $s->id_barang), '<i class="fa fa-trash fa-lg"></i>&nbsp;&nbsp;Hapus', 'title="delete" class="btn btn-sm btn-danger "');
 										?>
                                 </td>
                             </tr>
@@ -127,7 +88,7 @@ td {
                         </tbody>
                     </table>
                 </div>
-                <?php else :?>
+                <?php else : ?>
                 <div class="box-body">
                     <table id="myTable" class="table table-bordered table-striped table-hover">
                         <thead>
@@ -137,7 +98,9 @@ td {
                                 <th>Nomor Seri</th>
                                 <th>Pemilik</th>
                                 <th>Kategori Kerusakan</th>
+                                <th>Tanggal Masuk</th>
                                 <th>Tanggal Keluar</th>
+
                             </tr>
                         </thead>
                         <tbody>
@@ -150,6 +113,7 @@ td {
                                 <td><?php echo $s->no_seri; ?></td>
                                 <td><?php echo $s->pemilik; ?></td>
                                 <td><?php echo $s->nama_kategori; ?></td>
+                                <td><?php echo $s->tgl_masuk; ?></td>
                                 <td><?php echo $s->tgl_keluar; ?></td>
 
                             </tr>
@@ -157,7 +121,7 @@ td {
                         </tbody>
                     </table>
                 </div>
-                <?php endif;?>
+                <?php endif; ?>
             </div>
         </div>
     </div>
@@ -165,13 +129,6 @@ td {
 <script src="<?php echo base_url() ?>assets/app/js/alert.js"></script>
 <script>
 $(document).ready(function() {
-    $('.input-daterange').datepicker({
-        todayBtn: 'linked',
-        format: "yyyy-mm-dd",
-        autoclose: true
-    });
-
-
     $('#myTable').DataTable({
         dom: 'Blfrtip',
 

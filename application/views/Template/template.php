@@ -112,36 +112,39 @@
                 </div>
                 <!-- /.search form -->
                 <!-- sidebar menu: : style can be found in sidebar.less -->
-                <?php if ($this->session->userdata('akses') == 1 || $this->session->userdata('akses') == 3) : ?>
+                <?php if ($this->session->userdata('akses') == 1 ) : ?>
                 <ul class="sidebar-menu" data-widget="tree">
                     <li class="header">MAIN NAVIGATION</li>
                     <li>
                         <a href="<?php echo base_url() ?>dashboard">
-                            <i class="fa fa-dashboard"></i> <span>DASHBOARD</span>
+                            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                            <span class="pull-right-container">
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo base_url() ?>index.php/operator">
+                            <i class="fa fa-user-circle"></i> <span>Administrasi</span>
                             <span class="pull-right-container">
                             </span>
                         </a>
                     </li>
                     <li class="active treeview">
                         <a href="#">
-                            <i class="fa fa-folder-o"></i> <span>MASTER DATA</span>
+                            <i class="fa fa-folder-o"></i> <span>Pusat Data</span>
                             <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right-container"></i>
                             </span>
                         </a>
                         <ul class="treeview-menu">
                             <li class="active"><a href="<?php echo base_url() ?>index.php/kategori"><i
-                                        class="fa fa-circle-o"></i>KATEGORI</a></li>
+                                        class="fa fa-circle-o"></i>Kategori Kerusakan</a></li>
+                            <li class="active"><a href="<?php echo base_url() ?>index.php/sbarang"><i
+                                        class="fa fa-circle-o"></i>Semua Barang</a></li>
 
                         </ul>
                     </li>
-                    <li>
-                        <a href="<?php echo base_url() ?>index.php/operator">
-                            <i class="fa fa-user-circle"></i> <span>OPERATOR</span>
-                            <span class="pull-right-container">
-                            </span>
-                        </a>
-                    </li>
+
                     <li class="active treeview">
                         <a href="#">
                             <i class="fa fa-folder-o"></i> <span> Barang Masuk</span>
@@ -183,18 +186,60 @@
                     <li class="header">MAIN NAVIGATION</li>
                     <li>
                         <a href="<?php echo base_url() ?>dashboard">
-                            <i class="fa fa-dashboard"></i> <span>DASHBOARD</span>
+                            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                             <span class="pull-right-container">
                             </span>
                         </a>
                     </li>
-                    <li>
-                        <a href="<?php echo base_url() ?>index.php/stok">
-                            <i class="fa fa-cubes"></i> <span>STOK</span>
+
+                    <li class="active treeview">
+                        <a href="#">
+                            <i class="fa fa-folder-o"></i> <span>Pusat Data</span>
                             <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right-container"></i>
                             </span>
                         </a>
+                        <ul class="treeview-menu">
+                            <li class="active"><a href="<?php echo base_url() ?>index.php/kategori"><i
+                                        class="fa fa-circle-o"></i>Semua Barang</a></li>
+
+                        </ul>
                     </li>
+
+                    <li class="active treeview">
+                        <a href="#">
+                            <i class="fa fa-folder-o"></i> <span> Barang Masuk</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right-container"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li class="active"><a href="<?php echo base_url() ?>index.php/lbm/post"><i
+                                        class="fa fa-circle-o"></i>Input Data</a></li>
+                            <li class="active"><a href="<?php echo base_url() ?>index.php/lbm"><i
+                                        class="fa fa-circle-o"></i>Lihat Data</a></li>
+                        </ul>
+
+                    </li>
+
+                    <li class="active treeview">
+                        <a href="#">
+                            <i class="fa fa-folder-o"></i> <span> Barang Keluar</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right-container"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li class="active"><a href="<?php echo base_url() ?>index.php/lbk/post"><i
+                                        class="fa fa-circle-o"></i>Input Data</a></li>
+                            <li class="active"><a href="<?php echo base_url() ?>index.php/lbk"><i
+                                        class="fa fa-circle-o"></i>Lihat Data</a></li>
+
+                        </ul>
+
+                    </li>
+
+
 
                 </ul>
                 <?php endif; ?>

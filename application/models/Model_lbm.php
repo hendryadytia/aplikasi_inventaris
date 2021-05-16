@@ -6,6 +6,7 @@ class Model_lbm extends CI_Model{
 	{
 		return 
 		$this->db
+		->where('status !=' ,1)
 		->join('kategori','kategori.id_kategori = baranginv.id_kerusakan','left')
 		->get('baranginv')->result();
 	}
@@ -47,4 +48,18 @@ class Model_lbm extends CI_Model{
 		$param = array('id_barang' => $id);
 		return $this->db->get_where('stok',$param)->row();
 	}
+
+	
+    function get_range($start, $end)
+    {
+            return $this->db
+				->where('status !=' ,1)
+                ->where("tgl_masuk >=", $start)
+                ->where("tgl_masuk <=", $end)
+				->join('kategori','kategori.id_kategori = baranginv.id_kerusakan','left')
+                ->order_by('id_barang', 'ASC')
+                ->get('baranginv')->result();
+      
+    }
+    
 }

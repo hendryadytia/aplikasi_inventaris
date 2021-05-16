@@ -12,20 +12,19 @@ class lbm extends CI_Controller
     }
 
 
-    function index()
+   
+    function index($start = null, $end = null)
     {
         if (isset($_POST['search'])) {
             $start = $this->input->post('start_date');
             $end = $this->input->post('end_date');
-            $metode = $this->input->post('metode');
-            $data['barangmasuk'] = $this->Model_lbm->get_range($start, $end, $metode);
+            $data['barangmasuk'] = $this->Model_lbm->get_range($start, $end);
             $this->template->load('template/template', 'lbm/lihat_data', $data);
             $this->load->view('template/datatables');
         } elseif (isset($_GET['tgl'])) {
             $start = $_GET['tgl'];
             $end = $_GET['tgl'];
-            $metode = '';
-            $data['barangmasuk'] = $this->Model_lbm->get_range($start, $end, $metode);
+            $data['barangmasuk'] = $this->Model_lbm->get_range($start, $end);
             $this->template->load('template/template', 'lbm/lihat_data', $data);
             $this->load->view('template/datatables');
         } else {
@@ -33,7 +32,6 @@ class lbm extends CI_Controller
             $this->template->load('template/template', 'lbm/lihat_data', $data);
             $this->load->view('template/datatables');
         }
-        
     }
 
     function post()

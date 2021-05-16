@@ -51,7 +51,7 @@ td {
                 </div>
                 <div class="row">
                     <div class="col-xs-12">
-                        <?php echo form_open('laporan', array('role' => "form", 'id' => "myForm", 'data-toggle' => "validator")); ?>
+                        <?php echo form_open('lbm', array('role' => "form", 'id' => "myForm", 'data-toggle' => "validator")); ?>
                         <div class="col-md-3">
                             <div class="input-daterange">
                                 <div class="form-group">
@@ -91,6 +91,7 @@ td {
                         </form>
                     </div>
                 </div>
+                <?php if ($this->session->userdata('akses') == 1 ):?>
                 <div class="box-body">
                     <table id="myTable" class="table table-bordered table-striped table-hover">
                         <thead>
@@ -126,6 +127,36 @@ td {
                         </tbody>
                     </table>
                 </div>
+                <?php else :?>
+                <div class="box-body">
+                    <table id="myTable" class="table table-bordered table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Nama barang</th>
+                                <th>Nomor Seri</th>
+                                <th>Pemilik</th>
+                                <th>Kategori Kerusakan</th>
+                                <th>Tanggal Masuk</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+							$no = 0;
+							foreach ($barangmasuk as $s) { ?>
+                            <tr>
+                                <td><?php echo ++$no ?> </td>
+                                <td><?php echo $s->nama_barang; ?></td>
+                                <td><?php echo $s->no_seri; ?></td>
+                                <td><?php echo $s->pemilik; ?></td>
+                                <td><?php echo $s->nama_kategori; ?></td>
+                                <td><?php echo $s->tgl_masuk; ?></td>
+                            </tr>
+                            <?php }	?>
+                        </tbody>
+                    </table>
+                </div>
+                <?php endif ;?>
             </div>
         </div>
     </div>
@@ -133,6 +164,14 @@ td {
 <script src="<?php echo base_url() ?>assets/app/js/alert.js"></script>
 <script>
 $(document).ready(function() {
+
+
+    $('.input-daterange').datepicker({
+        todayBtn: 'linked',
+        format: "yyyy-mm-dd",
+        autoclose: true
+    });
+
     $('#myTable').DataTable({
         dom: 'Blfrtip',
 

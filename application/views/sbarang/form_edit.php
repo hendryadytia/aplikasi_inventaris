@@ -18,7 +18,7 @@
                     <h3 class='box-title'>Edit Data Barang</h3>
                 </div>
                 <div class="box-body">
-                    <?php echo form_open('lbm/edit', array('role' => "form", 'id' => "myForm", 'data-toggle' => "validator")); ?>
+                    <?php echo form_open('sbarang/edit', array('role' => "form", 'id' => "myForm", 'data-toggle' => "validator")); ?>
                     <div class="form-group">
                         <label for="nama_barang" class="control-label">Nama Barang</label>
                         <div class="input-group">
@@ -85,6 +85,18 @@
                         </div>
                         <div class="help-block with-errors"></div>
                     </div>
+                    <div class="form-group input-daterange">
+                        <label for="tgl_keluar" class="control-label">Tanggal Keluar</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="tgl_keluar" id="tgl_keluar"
+                                data-error="Tanggal masuk harus diisi" value="<?php echo $record['tgl_keluar'] ?>"
+                                required />
+                            <span class="input-group-addon">
+                                <span class="fa fa-calendar"></span>
+                            </span>
+                        </div>
+                        <div class="help-block with-errors"></div>
+                    </div>
 
                     <div class="box-footer">
                         <input type="hidden" name="id" value="<?php echo $record['id_barang'] ?>">
@@ -97,6 +109,7 @@
         </div>
     </div>
 </section>
+
 
 <script>
 $(document).ready(function() {
