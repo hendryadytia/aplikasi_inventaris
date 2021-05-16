@@ -200,7 +200,7 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li class="active"><a href="<?php echo base_url() ?>index.php/kategori"><i
+                            <li class="active"><a href="<?php echo base_url() ?>index.php/sbarang"><i
                                         class="fa fa-circle-o"></i>Semua Barang</a></li>
 
                         </ul>
