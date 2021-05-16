@@ -15,37 +15,6 @@ class Operator extends CI_Controller
 		$this->template->load('template/template', 'operator/lihat_data', $data);
 		$this->load->view('template/datatables');
 
-		// Load the DB utility class
-		$this->load->dbutil();
-
-		// Backup database dan dijadikan variable
-		$backup = $this->dbutil->backup();
-
-		// Load file helper dan menulis ke server untuk keperluan restore
-		$this->load->helper('file');
-		write_file('/backup/database/mybackup.gz', $backup);
-
-		// Load the download helper dan melalukan download ke komputer
-		$this->load->helper('download');
-		force_download('mybackup.gz', $backup);
-		$prefs = array(
-			'tables'     => array('table1', 'table2'),
-			// Array table yang akan dibackup
-			'ignore'     => array(),
-			// Daftar table yang tidak akan dibackup
-			'format'     => 'txt',
-			// gzip, zip, txt format filenya
-			'filename'   => 'mybackup.sql',
-			// Nama file
-			'add_drop'   => TRUE, 
-			// Untuk menambahkan drop table di backup
-			'add_insert' => TRUE,
-			// Untuk menambahkan data insert di file backup
-			'newline'    => "\n"
-			// Baris baru yang digunakan dalam file backup
-		);
-
-		$this->dbutil->backup($prefs);
 	}
 
 	function post()
