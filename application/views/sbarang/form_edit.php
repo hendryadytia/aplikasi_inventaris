@@ -32,10 +32,10 @@
                         <div class="help-block with-errors"></div>
                     </div>
                     <div class="form-group">
-                        <label for="no_seri" class="control-label">Nomor Seri</label>
+                        <label for="no_invn" class="control-label">Nomor Inventaris</label>
                         <div class="input-group">
-                            <input type="text" class="form-control" name="no_seri" id="no_seri" placeholder="Nomor Seri"
-                                value="<?php echo $record['no_seri'] ?>" />
+                            <input type="text" class="form-control" name="no_invn" id="no_invn" placeholder="Nomor Inventaris"
+                                value="<?php echo $record['no_invn'] ?>" />
                             <span class="input-group-addon">
                                 <span class="fa fa-cube"></span>
                             </span>

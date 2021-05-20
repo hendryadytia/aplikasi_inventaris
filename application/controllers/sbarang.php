@@ -53,14 +53,14 @@ class sbarang extends CI_Controller
             // proses barang
             $id = $this->input->post('id');
             $nama = $this->input->post('nama_barang');
-            $no_seri =  $this->input->post('no_seri');
+            $no_invn =  $this->input->post('no_invn');
             $pemilik = $this->input->post('pemilik');
             $id_kerusakan = $this->input->post('id_kerusakan');
             $tgl_masuk = $this->input->post('tgl_masuk'); 
             $tgl_keluar = $this->input->post('tgl_keluar'); 
             $data = array(
                 'nama_barang' => $nama,
-                'no_seri' => $no_seri,
+                'no_invn' => $no_invn,
                 'pemilik' => $pemilik,
                 'id_kerusakan' => $id_kerusakan,
                 'tgl_masuk' => $tgl_masuk,

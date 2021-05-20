@@ -30,9 +30,9 @@
                         <div class="help-block with-errors"></div>
                     </div>
                     <div class="form-group">
-                        <label for="nama_barang" class="control-label">Nomor Seri</label>
+                        <label for="nama_barang" class="control-label">Nomor Inventaris</label>
                         <div class="input-group">
-                            <input type="text" class="form-control" name="no_seri" id="no_seri" placeholder="Nomor Seri"
+                            <input type="text" class="form-control" name="no_invn" id="no_invn" placeholder="Nomor Inventaris"
                                 value="" />
                             <span class="input-group-addon">
                                 <span class="fa fa-cube"></span>

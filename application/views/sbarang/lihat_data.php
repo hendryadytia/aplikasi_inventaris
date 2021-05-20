@@ -29,9 +29,9 @@ td {
 </style>
 <?php if ($this->session->flashdata('message')) { ?>
 <div class="col-lg-12 alerts">
-    <div class="alert alert-dismissible alert-warning">
+    <div class="alert alert-dismissible alert-success">
         <button type="button" class="close" data-dismiss="alert">&times;</button>
-        <h4> <i class="icon fa fa-ban"></i>Warning</h4>
+        <h4> <i class="icon fa fa-check"></i>Okay!</h4>
         <p><?php echo $this->session->flashdata('message'); ?></p>
     </div>
 </div>
@@ -53,7 +53,7 @@ td {
                             <tr>
                                 <th>No</th>
                                 <th>Nama barang</th>
-                                <th>Nomor Seri</th>
+                                <th>Nomor Inventaris</th>
                                 <th>Pemilik</th>
                                 <th>Kategori Kerusakan</th>
                                 <th>Tanggal Masuk</th>
@@ -68,7 +68,7 @@ td {
                             <tr>
                                 <td><?php echo ++$no ?> </td>
                                 <td><?php echo $s->nama_barang; ?></td>
-                                <td><?php echo $s->no_seri; ?></td>
+                                <td><?php echo $s->no_invn; ?></td>
                                 <td><?php echo $s->pemilik; ?></td>
                                 <td><?php echo $s->nama_kategori; ?></td>
                                 <td><?php echo $s->tgl_masuk; ?></td>
@@ -91,7 +91,7 @@ td {
                             <tr>
                                 <th>No</th>
                                 <th>Nama barang</th>
-                                <th>Nomor Seri</th>
+                                <th>Nomor Inventaris</th>
                                 <th>Pemilik</th>
                                 <th>Kategori Kerusakan</th>
                                 <th>Tanggal Masuk</th>
@@ -106,7 +106,7 @@ td {
                             <tr>
                                 <td><?php echo ++$no ?> </td>
                                 <td><?php echo $s->nama_barang; ?></td>
-                                <td><?php echo $s->no_seri; ?></td>
+                                <td><?php echo $s->no_invn; ?></td>
                                 <td><?php echo $s->pemilik; ?></td>
                                 <td><?php echo $s->nama_kategori; ?></td>
                                 <td><?php echo $s->tgl_masuk; ?></td>
