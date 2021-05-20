@@ -8,7 +8,8 @@ project kali ini tentang program inventaris
 Release Information
 *******************
 
-rilis v0.1 ini masih kasar banget, banyak yg belum sesuai.  
+rilis v0.1 ini masih kasar banget, banyak yg belum sesuai.
+
 rilis v1 sudah oke namun fitur masih yg fundamental saja, untuk QR belum ada 
 
 **************************
