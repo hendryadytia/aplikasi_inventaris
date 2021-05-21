@@ -16,7 +16,7 @@ td {
         <div class="col-md-12">
             <div class="box box-info">
                 <div class='box-header  with-border'>
-                    <h3 class='box-title'>Kategori Barang</h3>
+                    <h3 class='box-title'>Kategori Kerusakan</h3>
                     <?php if ($this->session->userdata('akses') == 1 ):?>
                     <div class="pull-right">
                         <?php
