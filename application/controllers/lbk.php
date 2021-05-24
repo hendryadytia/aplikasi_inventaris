@@ -8,6 +8,7 @@ class lbk extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        chek_session();
         $this->load->model('Model_lbk');
     }
 
@@ -84,7 +85,7 @@ class lbk extends CI_Controller
     function hapus()
     {
         $id = $this->uri->segment(3);
-        $this->Model_barang->hapus($id);
+        $this->Model_lbk->hapus($id);
         $this->session->set_flashdata('message', 'Data Barang berhasil dihapus!');
         redirect('lbk');
     }

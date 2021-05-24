@@ -32,14 +32,9 @@ class Model_sbarang extends CI_Model
 		$this->db->where('id_barang', $id);
 		$this->db->update('baranginv', $data);
 	}
-
-    function hapus_trf($id)
-    {
-        $this->db->where('id', $id)->delete('detail_penjualan');
-    }
-
-    function hapus_id($id)
-    {
-        $this->db->where('id_dtlpen', $id)->delete('penjualan');
-    }
+    function hapus($id)
+	{
+		$this->db->where('id_barang', $id);
+		$this->db->delete('baranginv');
+	}
 }

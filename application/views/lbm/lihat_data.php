@@ -173,31 +173,31 @@ $(document).ready(function() {
         buttons: [{
                 extend: 'csvHtml5',
                 exportOptions: {
-                    columns: [0, 1, 2, 3, 4, 6],
+                    columns: [0, 1, 2, 3, 4, 5],
                 },
             },
             {
                 extend: 'excelHtml5',
                 title: 'Data Stok Barang',
                 exportOptions: {
-                    columns: [0, 1, 2, 3, 4, 6],
+                    columns: [0, 1, 2, 3, 4, 5],
                 },
             },
             {
                 extend: 'copyHtml5',
                 title: 'Data Stok Barang',
                 exportOptions: {
-                    columns: [0, 1, 2, 3, 4, 6],
+                    columns: [0, 1, 2, 3, 4, 5],
                 },
             },
             {
                 extend: 'pdfHtml5',
-                oriented: 'portrait',
+                orientation: 'landscape',
                 pageSize: 'legal',
                 title: 'Data Stok Barang',
                 download: 'open',
                 exportOptions: {
-                    columns: [0, 1, 2, 3, 4, 6],
+                    columns: [0, 1, 2, 3, 4, 5],
                 },
                 customize: function(doc) {
                     doc.content[1].table.widths = Array(doc.content[1].table.body[0].length + 1)
@@ -208,11 +208,11 @@ $(document).ready(function() {
             },
             {
                 extend: 'print',
-                oriented: 'portrait',
+                orientation: 'landscape',
                 pageSize: 'A4',
                 title: 'Data Stok Barang',
                 exportOptions: {
-                    columns: [0, 1, 2, 3, 4, 6],
+                    columns: [0, 1, 2, 3, 4, 5],
                 },
             },
         ],

@@ -6,6 +6,7 @@ class lbm extends CI_Controller
     function __construct()
     {
         parent::__construct();
+        chek_session();
         $this->load->model('Model_barang');
         $this->load->model('Model_kategori');
         $this->load->model('Model_lbm');

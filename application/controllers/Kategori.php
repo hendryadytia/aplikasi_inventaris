@@ -6,6 +6,7 @@ class Kategori extends CI_Controller
 	function __construct()
 	{
 		parent::__construct();
+		chek_session();
 		$this->load->model('Model_kategori');
 	}
 

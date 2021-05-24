@@ -31,8 +31,7 @@ class Model_lbk extends CI_Model
                 ->where("tgl_keluar <=", $end)
                 ->join('kategori','kategori.id_kategori = baranginv.id_kerusakan','left')
                 ->order_by('id_barang', 'ASC')
-                ->get('baranginv')->result();
-      
+                ->get('baranginv')->result(); 
     }
     
     function tampil_nmbrg(){
@@ -45,14 +44,11 @@ class Model_lbk extends CI_Model
 		$this->db->where('id_barang', $id);
 		$this->db->update('baranginv', $data);
 	}
+    
+    function hapus($id)
+	{
+		$this->db->where('id_barang', $id);
+		$this->db->delete('baranginv');
+	}
 
-    function hapus_trf($id)
-    {
-        $this->db->where('id', $id)->delete('detail_penjualan');
-    }
-
-    function hapus_id($id)
-    {
-        $this->db->where('id_dtlpen', $id)->delete('penjualan');
-    }
 }

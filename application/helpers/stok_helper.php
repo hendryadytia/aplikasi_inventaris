@@ -15,7 +15,7 @@ function chek_role()
     $session = $CI->session->userdata;
     if ($session['status_login'] != 'oke') {
         redirect('auth/login');
-    } else if ($session['akses'] != 1 && $session['akses'] != 3) {
+    } else if ($session['akses'] != 1 ) {
         show_error('Hanya administrator yang dapat mengakses halaman ini', 403, 'akses terlarang');
     }
 }
