@@ -251,8 +251,7 @@
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h1>
-                    Administrator
-                    <small>Control panel</small>
+                    Dashboard
                 </h1>
             </section>
             <!-- Main content -->
