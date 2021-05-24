@@ -53,7 +53,7 @@
                 <!-- mini logo for sidebar mini 50x50 pixels -->
                 <span class="logo-mini"><b>C</b>P</span>
                 <!-- logo for regular state and mobile devices -->
-                <span class="logo-lg"><b>Admin</b></span>
+                <span class="logo-lg"><b>Sistem Inventaris</b></span>
             </a>
             <!-- Header Navbar: style can be found in header.less -->
             <nav class="navbar navbar-static-top">
@@ -251,8 +251,7 @@
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h1>
-                    Administrator
-                    <small>Control panel</small>
+                    Dashboard
                 </h1>
             </section>
             <!-- Main content -->

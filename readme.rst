@@ -2,23 +2,22 @@
 Project Semester 4 WP 3 (?)
 ###################
 
-project kali ini tentang program inventaris sebuah CV general trading
+project kali ini tentang program inventaris
 
 *******************
 Release Information
 *******************
 
-rilis v0.1 ini masih kasar banget, banyak yg belum sesuai
+rilis v0.1 ini masih kasar banget, banyak yg belum sesuai.
+
+rilis v1 sudah oke namun fitur masih yg fundamental saja, untuk QR belum ada 
 
 **************************
-Changelog and future update
+future update
 **************************
 FU = 
-		1. halaman master data -> barang ditiadakan dan di merge dengan halaman laporan barang masuk
-		2. menyesuaikan form input barang keluar dan barang masuk
-		3. menyesuaikan kolom-kolom pada form input
-		4. menambahkan fitur fundamental yg belum ada
-		5. fitur print QR code (opsional)
+		
+		1. fitur print QR code (opsional)
 
 *******************
 Server Requirements
