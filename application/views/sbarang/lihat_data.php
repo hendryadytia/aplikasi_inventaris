@@ -42,7 +42,7 @@ td {
         <div class="col-md-12">
             <div class="box box-info">
                 <div class='box-header  with-border'>
-                    <h3 class='box-title'>Stok Barang</h3>
+                    <h3 class='box-title'>List Semua Barang</h3>
 
                 </div>
 

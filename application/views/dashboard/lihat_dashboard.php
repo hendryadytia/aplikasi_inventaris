@@ -48,7 +48,7 @@
             <div class="box box-widget widget-user">
                 <div class="widget-user-header bg-green-active">
                     <p style="text-align: center;">
-                        <span style="font-family: georgia, palatino; font-size: 15pt;">Selamat datang di Indotek Sinar
+                        <span style="font-family: georgia, palatino; font-size: 15pt;">Selamat Datang di CV. Indotek Sinar
                             Makmur</span>
                     </p>
                     <h3 class="widget-user-username"></h3>
@@ -65,7 +65,7 @@
                         </div>
                         <div class="col-sm-4 border-right">
                             <div class="description-block">
-                                <h5 class="description-header">Kantor: jl.wibawamukti no. 12A jatiasih, bekasi</h5>
+                                <h5 class="description-header">Kantor: Jl. Wibawamukti No. 12A Jatiasih, Bekasi</h5>
                                 <span class="description-text">No.Telp:</span>
                             </div>
                             <center>
