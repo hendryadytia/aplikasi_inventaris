@@ -28,7 +28,8 @@
 						</div>
 						<div class="help-block with-errors"></div>
 					</div>
-					<button type="submit" class="btn btn-info" name="submit"> simpan </button>
+					<button type="submit" class="btn btn-info" name="submit"> Simpan </button>
+					<a href="<?php echo base_url() ?>kategori" class="btn btn-default ">Cancel</a>
 					</form>
 				</div>
 			</div>
