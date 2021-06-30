@@ -27,7 +27,7 @@ class Dashboard extends CI_controller
                 'box'         => 'light-blue',
                 'total'     => $this->Model_dashboard->total('baranginv'),
                 'title'        => 'Total Barang',
-                'link'    => 'Barang',
+                'link'    => 'sbarang',
                 'icon'        => 'cubes'
             ],
             [
