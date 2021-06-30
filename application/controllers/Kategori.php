@@ -21,14 +21,7 @@ class Kategori extends CI_Controller
 	{
 		if (isset($_POST['submit'])) {
 			//proses kategori
-			$id = $this->input->post('id');
-			$nama = $this->input->post('nama_kategori');
-			$data = array(
-				'nama_kategori' => $nama
-			);
-
-			$this->Model_kategori->post($id, $data);
-			$this->session->set_flashdata('message', 'Kategori berhasil ditambahkan!');
+			$this->Model_kategori->post();
 			redirect('kategori');
 		} else {
 			$this->template->load('template/template', 'Kategori/form_input');
@@ -38,13 +31,7 @@ class Kategori extends CI_Controller
 	{
 		if (isset($_POST['submit'])) {
 			//proses kategori
-			$id = $this->input->post('id');
-			$nama = $this->input->post('nama_kategori');
-			$data = array(
-				'nama_kategori' => $nama
-			);
-			$this->Model_kategori->edit($id, $data);
-			$this->session->set_flashdata('message', 'Kategori berhasil diubah!');
+			$this->Model_kategori->edit();
 			redirect('kategori');
 		} else {
 			$id = $this->uri->segment(3);
