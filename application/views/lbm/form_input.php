@@ -80,7 +80,7 @@
                     </div>
                     <div class="box-footer">
                         <button type="submit" name="submit" class="btn btn-primary ">Simpan</button>
-                        <a href="<?php echo base_url() ?>barang" class="btn btn-default ">Cancel</a>
+                        <a href="<?php echo base_url() ?>lbm" class="btn btn-default ">Cancel</a>
                     </div>
                     </form>
                 </div><!-- /.box-body -->

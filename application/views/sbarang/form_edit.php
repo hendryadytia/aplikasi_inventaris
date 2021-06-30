@@ -101,7 +101,7 @@
                     <div class="box-footer">
                         <input type="hidden" name="id" value="<?php echo $record['id_barang'] ?>">
                         <button type="submit" name="submit" class="btn btn-primary ">Simpan</button>
-                        <a href="<?php echo base_url() ?>barang" class="btn btn-default ">Cancel</a>
+                        <a href="<?php echo base_url() ?>sbarang" class="btn btn-default ">Cancel</a>
                     </div>
                     </form>
                 </div><!-- /.box-body -->
