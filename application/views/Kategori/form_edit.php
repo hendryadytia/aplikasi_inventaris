@@ -16,7 +16,7 @@
 				</div>
 				<div class="box-body">
 					<?php
-					echo form_open('kategori/post', array('role' => "form", 'id' => "myForm", 'data-toggle' => "validator"));
+					echo form_open('kategori/edit', array('role' => "form", 'id' => "myForm", 'data-toggle' => "validator"));
 					?>
 					<div class="form-group">
 						<label for="kategori" class="control-label">Nama Kategori</label>
@@ -28,6 +28,7 @@
 						</div>
 						<div class="help-block with-errors"></div>
 					</div>
+					<input type="hidden" name="id" value="<?php echo $record['id_kategori']; ?>">
 					<button type="submit" class="btn btn-info" name="submit"> Simpan </button>
 					<a href="<?php echo base_url() ?>kategori" class="btn btn-default ">Cancel</a>
 					</form>
