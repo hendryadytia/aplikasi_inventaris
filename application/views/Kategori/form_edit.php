@@ -12,7 +12,7 @@
 		<div class='col-xs-12'>
 			<div class="box box-info">
 				<div class="box-header with-border">
-					<h3 class="box-title"> Tambah Data Kategori</h3>
+					<h3 class="box-title"> Ubah Data Kategori</h3>
 				</div>
 				<div class="box-body">
 					<?php
